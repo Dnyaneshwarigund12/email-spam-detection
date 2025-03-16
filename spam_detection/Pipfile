@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+pandas = "*"
+scikit-learn = "*"
+
+[requires]
+python_version = "3.9"
+
+
+[scripts]
+dev = "python manage.py runserver"
+update_version = "python core/update_version.py"
+shell = "python manage.py shell -i ipython"
+"db:migrate" = "python manage.py migrate"
+cmd = "python manage.py"
+"db:makemigrations" = "python manage.py makemigrations"
